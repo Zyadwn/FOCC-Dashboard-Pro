@@ -60,16 +60,6 @@ function updateDates() {
 
 }
 
-
-/* ===========================
-      INITIALIZE
-=========================== */
-
-updateClock();
-updateDates();
-
-setInterval(updateClock, 1000);
-setInterval(updateDates, 60000);
 /* ===========================
         RUNWAY
 =========================== */
@@ -91,3 +81,14 @@ async function loadRunway() {
     }
 
 }
+/* ===========================
+      INITIALIZE
+=========================== */
+
+updateClock();
+updateDates();
+loadRunway();
+
+setInterval(updateClock, 1000);
+setInterval(updateDates, 60000);
+setInterval(loadRunway, 10000);
