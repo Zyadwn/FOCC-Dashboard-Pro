@@ -1,1 +1,432 @@
-.
+/* =====================================================
+   FOCC Dashboard
+   Fire Operations Control Center
+   ===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#071B2F;
+    color:#ffffff;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+    padding:24px;
+    gap:18px;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+header{
+
+    display:grid;
+    grid-template-columns:35% 65%;
+    gap:22px;
+
+}
+
+
+/* LEFT */
+
+.header-left{
+
+    background:#102B46;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+}
+
+.header-left img{
+
+    width:170px;
+    margin-bottom:20px;
+
+}
+
+.header-left h1{
+
+    font-size:58px;
+    font-weight:800;
+    letter-spacing:4px;
+
+}
+
+.header-left p{
+
+    margin-top:8px;
+
+    font-size:24px;
+
+    color:#C9D6E2;
+
+}
+
+
+/* RIGHT */
+
+.header-right{
+
+    background:#102B46;
+
+    border-radius:18px;
+
+    padding:25px;
+
+}
+
+.header-right h2{
+
+    font-size:28px;
+
+    margin-bottom:22px;
+
+    letter-spacing:1px;
+
+}
+
+
+/* WEATHER */
+
+.weather-items{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+}
+
+.weather-card{
+
+    background:#163B5E;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    text-align:center;
+
+}
+
+.weather-card span{
+
+    font-size:34px;
+
+}
+
+.weather-card h3{
+
+    margin-top:12px;
+
+    font-size:34px;
+
+}
+
+.weather-card small{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-size:18px;
+
+    color:#C9D6E2;
+
+}
+
+
+/* DATE */
+
+.dates{
+
+    margin-top:22px;
+
+    text-align:center;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    color:#E8EEF5;
+
+}
+
+
+/* =====================================================
+   TIME SECTION
+   ===================================================== */
+
+.time-section{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+}
+
+.time-card{
+
+    background:#102B46;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.time-card h2{
+
+    font-size:28px;
+
+    letter-spacing:2px;
+
+    color:#C9D6E2;
+
+}
+
+.time-card div{
+
+    margin-top:18px;
+
+    font-size:90px;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+}
+
+
+
+/* =====================================================
+   OPERATIONS
+   ===================================================== */
+
+.operations{
+
+    display:grid;
+
+    grid-template-columns:35% 65%;
+
+    gap:22px;
+
+}
+
+.runway,
+.information{
+
+    background:#102B46;
+
+    border-radius:18px;
+
+    padding:22px;
+
+}
+
+.runway h2,
+.information h2{
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+}
+
+#runway{
+
+    text-align:center;
+
+    font-size:72px;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    margin-top:40px;
+
+}
+
+#operational-information{
+
+    font-size:24px;
+
+    line-height:1.7;
+
+    color:#F2F5F8;
+
+    white-space:pre-line;
+
+}
+
+
+/* =====================================================
+   FIRE STATIONS
+   ===================================================== */
+
+.stations{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#102B46;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    overflow:hidden;
+
+}
+
+.stations h2{
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+    letter-spacing:2px;
+
+}
+
+
+/* ==========================
+        MAIN STATION
+========================== */
+
+#main-station{
+
+    background:#163B5E;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    margin-bottom:20px;
+
+}
+
+#main-station h3{
+
+    font-size:28px;
+
+    margin-bottom:12px;
+
+    color:#FFFFFF;
+
+}
+
+#main-station .vehicles{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.vehicle{
+
+    background:#1D4E79;
+
+    padding:8px 14px;
+
+    border-radius:8px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    color:#ffffff;
+
+}
+
+
+/* ==========================
+       STATIONS GRID
+========================== */
+
+.stations-grid{
+
+    flex:1;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+    align-content:start;
+
+}
+
+.station{
+
+    background:#163B5E;
+
+    border-radius:14px;
+
+    padding:16px;
+
+}
+
+.station h3{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+    letter-spacing:1px;
+
+}
+
+.station .vehicles{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+}
+
+
+/* =====================================================
+   SCROLLBAR
+   ===================================================== */
+
+::-webkit-scrollbar{
+
+    width:0;
+
+    height:0;
+
+}
