@@ -41,24 +41,20 @@ function updateDates() {
     const now = new Date();
 
     // Gregorian Date
-    document.getElementById("gregorian-date").textContent =
-        now.toLocaleDateString("en-GB", {
-            weekday: "long",
-            day: "numeric",
-            month: "long",
-            year: "numeric"
-        });
+document.getElementById("gregorian-date").textContent =
+    now.toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric"
+    });
 
     // Hijri Date
     document.getElementById("hijri-date").textContent =
-        new Intl.DateTimeFormat("en-TN-u-ca-islamic", {
-            weekday: "long",
-            day: "numeric",
-            month: "long",
-            year: "numeric"
-        }).format(now);
-
-}
+    new Intl.DateTimeFormat("en-TN-u-ca-islamic", {
+        day: "numeric",
+        month: "short",
+        year: "numeric"
+    }).format(now);
 
 /* ===========================
         RUNWAY
