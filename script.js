@@ -70,3 +70,24 @@ updateDates();
 
 setInterval(updateClock, 1000);
 setInterval(updateDates, 60000);
+/* ===========================
+        RUNWAY
+=========================== */
+
+async function loadRunway() {
+
+    try {
+
+        const response = await fetch("runway.txt");
+
+        const text = await response.text();
+
+        document.getElementById("runway").textContent = text.trim();
+
+    } catch (error) {
+
+        document.getElementById("runway").textContent = "N/A";
+
+    }
+
+}
