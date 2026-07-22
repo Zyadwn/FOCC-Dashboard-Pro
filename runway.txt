@@ -1,1 +1,3 @@
-.
+DEP: 34L
+ARR: 34C
+DEP & ARR: 34L
