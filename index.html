@@ -1,1 +1,146 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOCC Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==========================
+            HEADER
+    =========================== -->
+
+    <header>
+
+        <!-- Left -->
+        <section class="header-left">
+
+            <img src="images/jedco-logo.png" alt="JEDCO Logo">
+
+            <h1>FOCC</h1>
+
+            <p>Fire Operations Control Center</p>
+
+        </section>
+
+
+        <!-- Right -->
+        <section class="header-right">
+
+            <h2>AIRPORT WEATHER</h2>
+
+            <div class="weather-items">
+
+                <div class="weather-card">
+                    <span>🌡</span>
+                    <h3 id="temperature">--°C</h3>
+                    <small>Temperature</small>
+                </div>
+
+                <div class="weather-card">
+                    <span>💨</span>
+                    <h3 id="wind">-- km/h</h3>
+                    <small>Wind</small>
+                </div>
+
+                <div class="weather-card">
+                    <span>👁</span>
+                    <h3 id="visibility">-- km</h3>
+                    <small>Visibility</small>
+                </div>
+
+            </div>
+
+            <div class="dates">
+
+                <span id="gregorian-date"></span>
+
+                <span>|</span>
+
+                <span id="hijri-date"></span>
+
+            </div>
+
+        </section>
+
+    </header>
+
+
+    <!-- ==========================
+              TIME
+    =========================== -->
+
+    <section class="time-section">
+
+        <div class="time-card">
+
+            <h2>LOCAL TIME</h2>
+
+            <div id="local-time">00:00</div>
+
+        </div>
+
+        <div class="time-card">
+
+            <h2>ZULU TIME</h2>
+
+            <div id="zulu-time">00:00</div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================
+          OPERATIONS
+    =========================== -->
+
+    <section class="operations">
+
+        <div class="runway">
+
+            <h2>RUNWAY IN USE</h2>
+
+            <div id="runway">--</div>
+
+        </div>
+
+        <div class="information">
+
+            <h2>OPERATIONAL INFORMATION</h2>
+
+            <div id="operational-information"></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================
+          FIRE STATIONS
+    =========================== -->
+
+    <section class="stations">
+
+        <h2>FIRE STATIONS</h2>
+
+        <div id="main-station"></div>
+
+        <div class="stations-grid" id="stations-grid"></div>
+
+    </section>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
