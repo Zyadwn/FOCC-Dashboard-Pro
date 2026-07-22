@@ -72,11 +72,12 @@ async function loadRunway() {
 
         const text = await response.text();
 
-        document.getElementById("runway").textContent = text.trim();
+        document.getElementById("runway").innerHTML =
+            text.trim().replace(/\n/g, "<br>");
 
     } catch (error) {
 
-        document.getElementById("runway").textContent = "N/A";
+        document.getElementById("runway").innerHTML = "N/A";
 
     }
 
